@@ -15,7 +15,7 @@ This repository includes the following components:
    - The source code for the S-Rocket simulations is available in a separate repository. You can find it [here]((https://github.com/barcha2000/srocket)).
 
 3. **InceptionTime Simulations**
-   - The source code for the InceptionTime simulations is available in a separate repository. You can find it [here](https://github.com/barcha2000/InceptionTime)).
+   - The source code for the InceptionTime simulations is available in a separate repository. You can find it [here](https://github.com/barcha2000/InceptionTime).
 
 4. **TimesNet Simulations**
    - The source code for the TimesNet simulations is available in a separate repository. You can find it [here](https://github.com/barcha2000/Time-Series-Library).
