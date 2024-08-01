@@ -61,85 +61,85 @@ datasets = [
 ]
 
 
-# """
-# Logistic regression
-# """
-# params_grid = {
-#     'iter_num': [100],
-#     # 'metric_type': ["", "ppv", "max"],
-#     'metric_type': ["ppv", "max"],
-#     'penalty': ['l1', 'l2', 'elasticnet', None]
-# }
-#
-# if __name__ == '__main__':
-#     mlflow.set_tracking_uri("http://127.0.0.1:5000")
-#     mlflow.set_experiment('LOGISTIC_REGRESSION_ECG200')
-#     for i in datasets:
-#         run_experiment(logistic_regression_experiment,i, params_grid)
+"""
+Logistic regression
+"""
+params_grid = {
+    'iter_num': [100],
+    # 'metric_type': ["", "ppv", "max"],
+    'metric_type': ["ppv", "max"],
+    'penalty': ['l1', 'l2', 'elasticnet', None]
+}
+
+if __name__ == '__main__':
+    mlflow.set_tracking_uri("http://127.0.0.1:5000")
+    mlflow.set_experiment('LOGISTIC_REGRESSION_ECG200')
+    for i in datasets:
+        run_experiment(logistic_regression_experiment,i, params_grid)
 
 
 
-#
-# """
-# K-Neighbours
-# """
-#
-#
-# params_grid = {
-#     'iter_num': [100],
-#     'metric_type': ["", "ppv", "max"],
-#     'k': [i for i in range(1,11)]
-# }
-#
-# if __name__ == '__main__':
-#     mlflow.set_tracking_uri("http://127.0.0.1:5000")
-#     mlflow.set_experiment('KNN_ECG200')
-#     for i in datasets:
-#         run_experiment(knn_experiment,i, params_grid)
+
+"""
+K-Neighbours
+"""
 
 
-# """
-# Naive Bayes
-# """
-#
-#
-# params_grid = {
-#     'iter_num': [100],
-#     'metric_type': ["", "ppv", "max"],
-#     'k': [1e-10,1e-9, 1e-8]
-# }
-#
-# if __name__ == '__main__':
-#     mlflow.set_tracking_uri("http://127.0.0.1:5000")
-#     mlflow.set_experiment('NAIVEBAYES_ECG200')
-#     for i in datasets:
-#         run_experiment(naive_bayes_experiment,i, params_grid)
+params_grid = {
+    'iter_num': [100],
+    'metric_type': ["", "ppv", "max"],
+    'k': [i for i in range(1,11)]
+}
 
-#
-# """
-# SVM
-# """
-#
-#
-# params_grid = {
-#     'iter_num': [100],
-#     # 'metric_type': ["max"],
-#     'metric_type': ["","ppv", "max"],
-#     'c': [10**i for i in range(2, 5)],
-#     'kernel': ['rbf', 'linear', 'poly', 'sigmoid']
-#     # 'kernel': ['linear', 'poly', 'sigmoid']
-#     # 'kernel': ['poly', 'sigmoid']
-#
-# }
-#
-# if __name__ == '__main__':
-#     mlflow.set_tracking_uri("http://127.0.0.1:5000")
-#     mlflow.set_experiment('SVM_ECG200')
-#     for i in datasets:
-#         run_experiment(svm_experiment,i, params_grid)
+if __name__ == '__main__':
+    mlflow.set_tracking_uri("http://127.0.0.1:5000")
+    mlflow.set_experiment('KNN_ECG200')
+    for i in datasets:
+        run_experiment(knn_experiment,i, params_grid)
 
 
-#mlflow server    --backend-store-uri sqlite:///mlflow.db   --default-artifact-root gs://rocket_experiments/mlflow
+"""
+Naive Bayes
+"""
+
+
+params_grid = {
+    'iter_num': [100],
+    'metric_type': ["", "ppv", "max"],
+    'k': [1e-10,1e-9, 1e-8]
+}
+
+if __name__ == '__main__':
+    mlflow.set_tracking_uri("http://127.0.0.1:5000")
+    mlflow.set_experiment('NAIVEBAYES_ECG200')
+    for i in datasets:
+        run_experiment(naive_bayes_experiment,i, params_grid)
+
+
+"""
+SVM
+"""
+
+
+params_grid = {
+    'iter_num': [100],
+    # 'metric_type': ["max"],
+    'metric_type': ["","ppv", "max"],
+    'c': [10**i for i in range(2, 5)],
+    'kernel': ['rbf', 'linear', 'poly', 'sigmoid']
+    # 'kernel': ['linear', 'poly', 'sigmoid']
+    # 'kernel': ['poly', 'sigmoid']
+
+}
+
+if __name__ == '__main__':
+    mlflow.set_tracking_uri("http://127.0.0.1:5000")
+    mlflow.set_experiment('SVM_ECG200')
+    for i in datasets:
+        run_experiment(svm_experiment,i, params_grid)
+
+
+mlflow server    --backend-store-uri sqlite:///mlflow.db   --default-artifact-root gs://rocket_experiments/mlflow
 
 """
 BAGGING
@@ -177,19 +177,19 @@ if __name__ == '__main__':
     except Exception as e:
         logger.exception(e)
 
-# """
-# BOOSTING
-# """
-#
-#
-# params_grid = {
-#     'iter_num': [100],
-#     'metric_type': ["", "ppv", "max"],
-#     'k': [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
-# }
-#
-# if __name__ == '__main__':
-#     mlflow.set_tracking_uri("http://127.0.0.1:5000")
-#     mlflow.set_experiment('BAGGING_ECG200')
-#     for i in datasets:
-#         run_experiment(boosting_experiment,i, params_grid)
+"""
+BOOSTING
+"""
+
+
+params_grid = {
+    'iter_num': [100],
+    'metric_type': ["", "ppv", "max"],
+    'k': [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+}
+
+if __name__ == '__main__':
+    mlflow.set_tracking_uri("http://127.0.0.1:5000")
+    mlflow.set_experiment('BAGGING_ECG200')
+    for i in datasets:
+        run_experiment(boosting_experiment,i, params_grid)
