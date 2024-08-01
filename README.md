@@ -12,7 +12,7 @@ This repository includes the following components:
    - This directory contains the implementation codes for the Rocket and MiniRocket simulations used in the thesis.
 
 2. **S-Rocket Simulations**
-   - The source code for the S-Rocket simulations is available in a separate repository. You can find it [here]((https://github.com/barcha2000/srocket)).
+   - The source code for the S-Rocket simulations is available in a separate repository. You can find it [here](https://github.com/barcha2000/srocket).
 
 3. **InceptionTime Simulations**
    - The source code for the InceptionTime simulations is available in a separate repository. You can find it [here](https://github.com/barcha2000/InceptionTime).
